@@ -24,7 +24,7 @@ public class TransferReversalServiceTest extends TestCase {
     public void testTransferReversalRequest() {
         request = factory.createTransferReversalRequest();
         request.setICA("009674");
-        request.setTransactionReference(4000000002010101031L);
+        request.setTransactionReference("4000000002010101031");
         request.setReversalReason("FAILURE IN PROCESSING");
         TransferReversal transferReversal = service.getTransferReversal(request);
         assertTrue(transferReversal != null);

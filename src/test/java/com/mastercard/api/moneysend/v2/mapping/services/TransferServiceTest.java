@@ -27,7 +27,7 @@ public class TransferServiceTest extends TestCase {
         transferRequestCard = factory.createTransferRequest();
         transferRequestCard.setLocalDate("1212");
         transferRequestCard.setLocalTime("161222");
-        transferRequestCard.setTransactionReference(4000000001010102040L);
+        transferRequestCard.setTransactionReference("4000000001010102040");
         transferRequestCard.setSenderName("John Doe");
         transferRequestCard.getSenderAddress().setLine1("123 Main Street");
         transferRequestCard.getSenderAddress().setLine2("#5A");
@@ -78,7 +78,7 @@ public class TransferServiceTest extends TestCase {
         transferRequestMapped = factory.createTransferRequest();
         transferRequestMapped.setLocalDate("1212");
         transferRequestMapped.setLocalTime("161222");
-        transferRequestMapped.setTransactionReference(4000000012010101024L);
+        transferRequestMapped.setTransactionReference("4000000012010101024");
         transferRequestMapped.getFundingMapped().setSubscriberId("example@email.com");
         transferRequestMapped.getFundingMapped().setSubscriberType("EMAIL_ADDRESS");
         transferRequestMapped.getFundingMapped().setSubscriberAlias("My Debit Card");
@@ -122,7 +122,7 @@ public class TransferServiceTest extends TestCase {
         paymentRequestCard = factory.createPaymentRequest();
         paymentRequestCard.setLocalDate("1226");
         paymentRequestCard.setLocalTime("125334");
-        paymentRequestCard.setTransactionReference(4000000002010101020L);
+        paymentRequestCard.setTransactionReference("4000000002010101020");
         paymentRequestCard.setSenderName("John Doe");
         paymentRequestCard.getSenderAddress().setLine1("123 Main Street");
         paymentRequestCard.getSenderAddress().setLine2("#5A");
@@ -155,7 +155,7 @@ public class TransferServiceTest extends TestCase {
         paymentRequestMapped = factory.createPaymentRequest();
         paymentRequestMapped.setLocalDate("0226");
         paymentRequestMapped.setLocalTime("125334");
-        paymentRequestMapped.setTransactionReference(4000000002010105701L);
+        paymentRequestMapped.setTransactionReference("4000000002010105701");
         paymentRequestMapped.setSenderName("John Doe");
         paymentRequestMapped.getSenderAddress().setLine1("123 Main Street");
         paymentRequestMapped.getSenderAddress().setLine2("#5A");

@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="ICA" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="TransactionReference" type="{http://www.w3.org/2001/XMLSchema}Long"/>
+ *         &lt;element name="TransactionReference" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="ReversalReason" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -48,7 +48,7 @@ public class TransferReversalRequest {
     @XmlElement(name = "ICA")
     protected String ica;
     @XmlElement(name = "TransactionReference")
-    protected Long transactionReference;
+    protected String transactionReference;
     @XmlElement(name = "ReversalReason", required = true)
     protected String reversalReason;
 
@@ -72,7 +72,7 @@ public class TransferReversalRequest {
      * Gets the value of the transactionReference property.
      * 
      */
-    public Long getTransactionReference() {
+    public String getTransactionReference() {
         return transactionReference;
     }
 
@@ -80,7 +80,7 @@ public class TransferReversalRequest {
      * Sets the value of the transactionReference property.
      * 
      */
-    public void setTransactionReference(Long value) {
+    public void setTransactionReference(String value) {
         this.transactionReference = value;
     }
 

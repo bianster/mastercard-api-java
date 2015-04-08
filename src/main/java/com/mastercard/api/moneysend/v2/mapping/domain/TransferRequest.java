@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="LocalDate" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="LocalTime" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="TransactionReference" type="{http://www.w3.org/2001/XMLSchema}Long"/>
+ *         &lt;element name="TransactionReference" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="SenderName" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="SenderAddress">
  *           &lt;complexType>
@@ -191,7 +191,7 @@ public class TransferRequest {
     @XmlElement(name = "LocalTime")
     protected String localTime;
     @XmlElement(name = "TransactionReference")
-    protected Long transactionReference;
+    protected String transactionReference;
     @XmlElement(name = "SenderName", required = true)
     protected String senderName;
     @XmlElement(name = "SenderAddress", required = true)
@@ -271,7 +271,7 @@ public class TransferRequest {
      * Gets the value of the transactionReference property.
      * 
      */
-    public Long getTransactionReference() {
+    public String getTransactionReference() {
         return transactionReference;
     }
 
@@ -279,7 +279,7 @@ public class TransferRequest {
      * Sets the value of the transactionReference property.
      * 
      */
-    public void setTransactionReference(Long value) {
+    public void setTransactionReference(String value) {
         this.transactionReference = value;
     }
 

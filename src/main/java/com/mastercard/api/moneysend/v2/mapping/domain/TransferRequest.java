@@ -172,6 +172,7 @@ import javax.xml.bind.annotation.XmlType;
     "receiverAddress",
     "receiverPhone",
     "receivingCard",
+    "receivingMapped",
     "receivingAmount",
     "channel",
     "ucafSupport",
@@ -213,6 +214,8 @@ public class TransferRequest {
     protected Integer receiverPhone;
     @XmlElement(name = "ReceivingCard", required = true)
     protected ReceivingCard receivingCard;
+    @XmlElement(name = "ReceivingMapped", required = true)
+    protected ReceivingMapped receivingMapped;
     @XmlElement(name = "ReceivingAmount", required = true)
     protected ReceivingAmount receivingAmount;
     @XmlElement(name = "Channel", required = true)
@@ -526,6 +529,30 @@ public class TransferRequest {
      */
     public void setReceivingCard(ReceivingCard value) {
         this.receivingCard = value;
+    }
+
+    /**
+     * Gets the value of the receivingMapped property.
+     *
+     * @return
+     *     possible object is
+     *     {@link com.mastercard.api.moneysend.v2.mapping.domain.TransferRequest.ReceivingMapped }
+     *
+     */
+    public ReceivingMapped getReceivingMapped() {
+        return receivingMapped;
+    }
+
+    /**
+     * Sets the value of the receivingMapped property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link com.mastercard.api.moneysend.v2.mapping.domain.TransferRequest.ReceivingMapped }
+     *
+     */
+    public void setReceivingMapped(ReceivingMapped value) {
+        this.receivingMapped = value;
     }
 
     /**
@@ -1378,6 +1405,108 @@ public class TransferRequest {
          */
         public void setCurrency(Integer value) {
             this.currency = value;
+        }
+
+    }
+
+    /**
+     * <p>Java class for anonymous complex type.
+     *
+     * <p>The following schema fragment specifies the expected content contained within this class.
+     *
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="SubscriberId" type="{http://www.w3.org/2001/XMLSchema}Long"/>
+     *         &lt;element name="SubscriberType" type="{http://www.w3.org/2001/XMLSchema}string"/>
+     *         &lt;element name="SubscriberAlias" type="{http://www.w3.org/2001/XMLSchema}string"/>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     *
+     *
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "subscriberId",
+        "subscriberType",
+        "subscriberAlias"
+    })
+    public static class ReceivingMapped {
+
+        @XmlElement(name = "SubscriberId")
+        protected String subscriberId;
+        @XmlElement(name = "SubscriberType", required = true)
+        protected String subscriberType;
+        @XmlElement(name = "SubscriberAlias", required = true)
+        protected String subscriberAlias;
+
+        /**
+         * Gets the value of the subscriberId property.
+         *
+         */
+        public String getSubscriberId() {
+            return subscriberId;
+        }
+
+        /**
+         * Sets the value of the subscriberId property.
+         *
+         */
+        public void setSubscriberId(String value) {
+            this.subscriberId = value;
+        }
+
+        /**
+         * Gets the value of the subscriberType property.
+         *
+         * @return
+         *     possible object is
+         *     {@link String }
+         *
+         */
+        public String getSubscriberType() {
+            return subscriberType;
+        }
+
+        /**
+         * Sets the value of the subscriberType property.
+         *
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *
+         */
+        public void setSubscriberType(String value) {
+            this.subscriberType = value;
+        }
+
+        /**
+         * Gets the value of the subscriberAlias property.
+         *
+         * @return
+         *     possible object is
+         *     {@link String }
+         *
+         */
+        public String getSubscriberAlias() {
+            return subscriberAlias;
+        }
+
+        /**
+         * Sets the value of the subscriberAlias property.
+         *
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *
+         */
+        public void setSubscriberAlias(String value) {
+            this.subscriberAlias = value;
         }
 
     }
